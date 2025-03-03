@@ -1,0 +1,31 @@
+# Database connection settings
+database:
+  dialect: "oracle"
+  driver: "cx_oracle"
+  hosts:
+    sp1:
+      host: "tpalpssqvd-scan.verizon.com"
+      port: 1521
+      service: "SP11"
+  
+# Oracle client paths
+oracle_client:
+  paths:
+    - "C:\\DevTools\\Oracle Instant Client 18.5\\instantclient_18_5"
+    - "C:\\Oracle\\instantclient_19_3"
+
+# Schemas
+schemas:
+  network_rw: "network_rw"
+
+# Application settings
+app:
+  credentials_file: "credentials.json"
+  drive_url: ""
+
+# SQL queries
+queries:
+  bomfc_dpv_detail_hist: |
+    SELECT *
+    FROM network_rw.bomfc_dpv_detail_hist
+    WHERE TRUNC(validity_date) = (SELECT TRUNC(MAX(validity_date)) FROM network_rw.bomfc_dpv_detail_hist)
