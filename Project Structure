@@ -1,0 +1,33 @@
+oracle_etl_tool/
+│
+├── config/
+│   ├── __init__.py
+│   ├── config.yaml  # Configuration file
+│   └── config.py    # Configuration loader
+│
+├── database/
+│   ├── __init__.py
+│   ├── connection.py  # Database connection handling
+│   └── queries.py     # SQL queries
+│
+├── operations/
+│   ├── __init__.py
+│   ├── extract.py     # Extraction operations
+│   ├── transform.py   # Transformation operations
+│   └── load.py        # Loading operations
+│
+├── utils/
+│   ├── __init__.py
+│   ├── credentials.py  # Credential management
+│   ├── logging_config.py  # Logging configuration
+│   └── helpers.py     # Helper functions
+│
+├── scripts/
+│   ├── download_forecast.py  # Script 1
+│   └── upload_data.py        # Script 2
+│
+├── __init__.py
+├── __main__.py        # CLI entry point
+├── requirements.txt   # Dependencies
+├── setup.py           # Package setup
+└── README.md          # Documentation
